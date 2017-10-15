@@ -1,0 +1,195 @@
+
+<!DOCTYPE HTML>
+<!--
+    Identity by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        
+        <title>CarpeCrypto.Me</title>
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/educational.css" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+
+
+
+    </head>
+    <body class="is-loading">
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Main -->
+                    <section id="main">
+                        
+                        <header>
+                            
+
+                            
+                            <h1>CarpeCrypto.Me</h1>
+                            
+
+                            
+                            <p>Donate your computer&#39;s CPU cycles to charity</p>
+
+                            
+                        </header>
+
+                        <hr />
+
+						<h2 id="minerStatus">Miner has not been started.</h2>
+						<div>Hashes/S: <span id="HashesPerSecond">0</span></div>
+						<div>Total Hashes: <span id="TotalHashes">0</span></div>
+						<div>Threads: <span id="NumThreads">0</span></div>
+						<div>Throttle: <span id="Throttle">0</span></div>
+
+<center>
+<select id="speed" style="width:180px;float:center;">
+<option value="0.0">100% speed</option>
+<option value="0.1">90% speed</option>
+<option value="0.2" SELECTED>80% speed</option>
+<option value="0.3">70% speed</option>
+<option value="0.4">60% speed</option>
+<option value="0.5">50% speed</option>
+<option value="0.6">40% speed</option>
+<option value="0.7">30% speed</option>
+<option value="0.8">20% speed</option>
+<option value="0.9">10% speed</option>
+</select>
+</center>
+
+						<br />
+
+						<button id="startButton" />Start Mining</button>
+						
+						<button id="stopButton" />Stop Mining</button>
+
+
+
+						<br /><br />
+
+						<p>The longer you let the miner run, the more funds it generates for charity.</p>
+
+
+
+<script type="text/javascript">
+
+var miner = new CoinHive.Anonymous('6Jw9kR080jYOMNHGBO4hMyun7UBJ6xz3',{ autoThreads: true, throttle: 0.8 });
+
+var checkInterval = 2000;
+
+document.getElementById("startButton").addEventListener("click", function() { miner.start(CoinHive.IF_EXCLUSIVE_TAB); minerStatus(); });
+document.getElementById("stopButton").addEventListener("click", function() { miner.stop(); minerStatus(); });
+
+
+function minerStatus() {
+	if (miner.isRunning()) {
+		
+
+		var e = document.getElementById("speed");
+		var setThrottle = e.options[e.selectedIndex].value;
+
+		miner.setThrottle(setThrottle);
+		
+		var NumThreads = miner.getNumThreads();
+		var Throttle = miner.getThrottle();
+		var HashesPerSecond = miner.getHashesPerSecond(); 
+		var TotalHashes = miner.getTotalHashes();
+
+	    document.getElementById("minerStatus").innerHTML = "Miner is currently running.";
+	    document.getElementById("HashesPerSecond").innerHTML = Math.round(HashesPerSecond);
+	    document.getElementById("TotalHashes").innerHTML = TotalHashes;
+	    document.getElementById("NumThreads").innerHTML = NumThreads;
+	    document.getElementById("Throttle").innerHTML = Throttle;
+
+	}
+	else  {
+	    document.getElementById("minerStatus").innerHTML = "Miner is stopped.";
+	}
+}
+
+setInterval(function() {
+  minerStatus();
+}, checkInterval);
+
+</script>
+<!--
+						<br /><br />
+						<p>You can keep this tab open to continue mining in the background while you do other things, or even leave your computer. Mining will continue until you click stop, close your browser or close this browser tab.</p>
+
+						<p>If your computer is bogging down too much, try adjusting the speed. This will lower the amount of CPU used by the miner.</p>
+
+                        <hr />
+
+                        
+                        <p><h2>What is this?</h2>By clicking the start button, you will be helping mine for Monero, which is a cryptocurrency simlar to BitCoin. All proceeds from mining minus any fees incurred (exchange fees, bank fees, etc) will be donated to disaster relief.</p>
+                        <hr />
+
+
+                        <p><h2>What charity will benefit?</h2>The charities that benefit will change periodically. Currently, my focus is to raise money for hurricane Irma relief.</p>
+                        <hr />
+                        
+                        
+                        <p><h2>How does it work?</h2>When you click start, you will allow your web browser to use your computer's CPU to mine for Monero. When you click stop or leave this web page, it will immediately stop. You're completely in control when the miner will be running.</p>
+                        <hr />
+
+                        <p><h2>Does it cost me anything?</h2>There is no fee to do this. However, since it is using your computer it will use some electricity which may cost you (or whomever pays your electricity bill) something.</p>
+                        <hr />
+                        
+
+                        <p><h2>What about my privacy?</h2>I do not collect any personal information on this site. The only information that is collected is aggregate visits and other non-peronally-identifiable information to allow me to monitor the amount of traffic this web page receives. The miner program is run by Coin-Hive and per their <a href="https://coin-hive.com/info/privacy">privacy policy</a> they do not place any cookies or any other user tracking methods.</p>
+                        <hr />
+
+                        <footer>
+                            
+                        </footer>
+                    </section>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <ul class="copyright">
+                            
+                            <li>&copy; Donate My CPU</li>
+                            
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </footer>
+
+            </div>
+
+        <!-- Scripts -->
+            <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+            <script>
+                if ('addEventListener' in window) {
+                    window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+                    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+                }
+            </script>
+
+            
+                <script type="text/javascript">
+
+                  var _gaq = _gaq || [];
+                  _gaq.push(['_setAccount', 'UA-372489-82']);
+                  _gaq.push(['_trackPageview']);
+
+                  (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                  })();
+
+                </script> 
+    </body>
+</html>
