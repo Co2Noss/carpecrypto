@@ -72,7 +72,7 @@ begin
     // Process the page
     // Read values into variables
     address := Page.Values[0];
-    SaveStringToFile('c:\config.txt', '-o stratum+tcp://pool.carpecrypto.me:3333'#13#10+'-u '+address+#13#10+'-p x', False);
+    SaveStringToFile('c:\config.txt', '-o stratum+tcp://pool.carpecrypto.me:3333'#13#10+'-u '+address+#13#10+'-p x'+#13#10+'-nofee 1'+#13#10+'-lowcpu', False);
   end;
 
  Result := True;
