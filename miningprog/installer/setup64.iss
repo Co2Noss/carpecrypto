@@ -19,6 +19,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
+PrivilegesRequired=admin
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
@@ -35,10 +36,10 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\charl\Desktop\Carpe\carpecrypto\miningprog\installer\Compile\cmm64.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\charl\Desktop\Carpe\carpecrypto\miningprog\installer\Compile\cmm64.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\charl\Desktop\Carpe\carpecrypto\miningprog\installer\cmm64.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\charl\Desktop\Carpe\carpecrypto\miningprog\installer\cmm64.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\config.txt"; DestDir: "{app}"; Flags: ignoreversion external
-Source: "C:\Users\charl\Desktop\Carpe\carpecrypto\miningprog\installer\Compile\msvcr110.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\charl\Desktop\Carpe\carpecrypto\miningprog\installer\msvcr110.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
@@ -47,6 +48,7 @@ Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\cmm64.ico"; Tasks: desktopicon
+Name: "{commonstartup}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\cmm64.ico"
 
 [Code]
 Var
@@ -58,11 +60,11 @@ BEGIN
   // Create the page
   Page := CreateInputQueryPage(wpWelcome,
     'XMR Address', 'Monero Wallet',
-    'Please enter your Monero Wallet Address');
+    'Please enter your Monero Wallet Address. PLEASE NOTE: It is case sensitive!');
   // Add items (False means it's not a password edit)
   Page.Add('XMR Wallet Address:', False);
   // Set initial values (optional)
-  Page.Values[0] := ExpandConstant('');
+  Page.Values[0] := ExpandConstant('43FeFPuaspxAEU7ZGEY93YBmG8nkA1x1Pgg5kTh7mYuLXCzMP3hERey6QBdKKBciuqhsakJD44bGHhJX98V3VjbZ9r1LKzx');
 END;
 
 function NextButtonClick(CurPageID: Integer): Boolean;
