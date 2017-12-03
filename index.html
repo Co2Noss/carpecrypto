@@ -131,7 +131,7 @@
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
+							<h2 class="major">Get in touch</h2><a name="anchor"></a>
 							<p>Having trouble setting up the app? Have general questions and need assistance? Shoot us an email and we'll get back to you.</p>
                                 <form id="form" class="topBefore" method="post" name="contactform" action="contact-form-handler.php"> 
 								<div class="field">
@@ -168,6 +168,7 @@
 			</div>
 
 		<!-- Scripts -->
+<script src="assets/js/gen_validatorv31.js"></script>
 <script language="JavaScript">
 // Code for validating the form
 // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
@@ -176,13 +177,7 @@ var frmvalidator  = new Validator("contactform");
 frmvalidator.addValidation("name","req","Please provide your name"); 
 frmvalidator.addValidation("message","req","Please insert a message");
 frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-</script>
-        <script language="javascript" type="text/javascript">
-function windowClose() {
-window.open('','_parent','');
-window.close();
-}
+frmvalidator.addValidation("email","email","Please enter a valid email address");
 </script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
@@ -190,7 +185,7 @@ window.close();
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-            <script src="assets/js/gen_validatorv31.js"</script>
+            
 
 	</body>
 </html>
