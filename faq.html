@@ -13,6 +13,28 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+      </style>
+		<style type="text/css">
+		#faqs 		{ position:relative; }
+		#faqs h4	{ cursor:pointer; }
+		#faqs h4.active	{ color:#d74646; }
+		#faqs div   { position:relative; }
+		#faqs div p	{ padding:0; margin-bottom:15px; position:relative; }
+	</style>
+    <script src="assets/js/jquery-1.6.4.js"></script>
+	<script type="text/javascript">
+	/* accessible */
+	$(document).ready(function() {
+		$('#faqs h4').each(function() {
+			var tis = $(this), state = false, answer = tis.next('div').slideUp();
+			tis.click(function() {
+				state = !state;
+				answer.slideToggle(state);
+				tis.toggleClass('active',state);
+			});
+		});
+	});
+	</script>
 	</head>
 	<body>
 
@@ -51,37 +73,39 @@
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
-
+                                        <div id="faqs">
 									<h3 class="major">F.A.Q.</h3>
-									<ul>
-                                        <li>What is mining?</li>
-                                        <ul>
-                                            <li>Mining is the process of making computer hardware do mathematical calculations for the network to confirm transactions and increase security. As a reward for their services, miners can collect transaction fees for the transactions they confirm, along with newly created coins. Mining is a specialized and competitive market where the rewards are divided up according to how much calculation is done.</li></ul>
-				                        <li>When do I get paid?</li>
-                                            <ul><li>Every time a block gets verified by miners much like yourself you get paid. This process usually takes anywhere from 30 minutes to two hours.</li></ul>
-				                        <li>What is &#34;hash rate&#34;?</li>
-                                            <ul><li>A hash is the output of a hash function and, as it relates to Monero, the Hash Rate is the speed at which a computer is completing an operation in the Monero code. A higher hash rate is better when mining as it increases your opportunity of finding the next block and receiving the reward.</li></ul>
-                                        <li>What is &#34;accepted hashes&#34;?</li>
-                                        <li>What are &#34;rejected hashes&#34;?</li>
-                                        <li>What is a block?</li>
-                                            <ul><li>A block is a unit of the code the comprises the bockchain. It is the record of transactions that have occurred since the last block was created and a confirmation to previous transactions.</li></ul>
-                                        <li>What is the blockchain?</li>
-                                            <ul><li>The blockchain is a public record of all transaction on the network in relation to the coin being viewed.</li></ul>
-                                        <li>What devices do you support?</li>
-                                        <ul>
-                                            <li>Computers
-                                                <ul><li>Windows</li><li>Mac</li></ul>
-                                            </li>
-                                            <li>Tablets
-                                                <ul><li>iPads</li><li>Android</li></ul>
-                                            </li>
-                                        </ul>
-                                        <li>What is Code 1450?</li>
-                                            <ul>
-                                                <li>Code 1450 means your antivirus flagged our miner as a virus. You need to allows the file to run and remove it from quarantine. If you have trouble contact us!</li>
-                                            </ul>
-												</ul>
-
+                                            
+                                    <h4>What is mining? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>Mining is the process of making computer hardware do mathematical calculations for the network to confirm transactions and increase security. As a reward for their services, miners can collect transaction fees for the transactions they confirm, along with newly created coins. Mining is a specialized and competitive market where the rewards are divided up according to how much calculation is done.</p></div>
+                                    
+                                    <h4>Will this work while my PC is hibernating or in sleep mode? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>No, youur personal computer must be powered on and running with normal power in order to perform the caluclations.</p></div>
+                                            
+                                    <h4>When do I get paid? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>Every time a block gets verified by miners much like yourself you get paid. This process usually takes anywhere from 30 minutes to two hours.</p></div>
+                                            
+                                    <h4>What is &#34;hash rate&#34;? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>A hash is the output of a hash function and, as it relates to Monero, the Hash Rate is the speed at which a computer is completing an operation in the Monero code. A higher hash rate is better when mining as it increases your opportunity of finding the next block and receiving the reward.</p></div>
+                                            
+                                    <h4>What is &#34;accepted hashes&#34;? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>An accepted share represents work that your miner did towards a round in a mining pool. When the pool finds a block, it distributes the block reward (i.e. 6XMR) to the miners according to how many shares they have contributed during that round. The more shares you contributed, the more payback you get.</p></div>
+                                            
+                                     <h4>What are &#34;rejected hashes&#34;? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>Rejected shares are bad, as it represents work computer that will not get applied towards a blockchain discovery, and will not be paid for.  Rejected shares commonly occur when your computer was busy grinding a cryptocoin share problem, and it did not submit the results in time to be counted towards a coin discovery. Rejected share work is discarded.</p></div>
+                                            
+                                    <h4>What is a block? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>A block is a unit of the code the comprises the bockchain. It is the record of transactions that have occurred since the last block was created and a confirmation to previous transactions.</p></div>
+                                            
+                                    <h4>What is the blockchain? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>The blockchain is a public record of all transaction on the network in relation to the coin being viewed.</p></div>
+                                            
+                                     <h4>What devices do you support? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>We support a multitude of devices from iPhone to Android. Windows and Mac PCs. Tablets and iPads.</p></div>
+                                            
+                                    <h4>What is Code 1450? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                            <div><p>Code 1450 means your antivirus flagged our miner as a virus. You need to allows the file to run and remove it from quarantine. If you have trouble contact us!</p></div>
+                                    </div>
 								</div>
 							</div>
 
