@@ -132,15 +132,15 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="javascript:void(0)">
+							<p>Having trouble setting up the app? Have general questions and need assistance? Shoot us an email and we'll get back to you.</p>
+                                <form id="form" class="topBefore" method="post" name="contactform" action="contact-form-handler.php"> 
 								<div class="field">
 									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
+									<input name="name" id="name" type="text">
 								</div>
 								<div class="field">
 									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
+									<input name="email" id="email" type="text">
 								</div>
 								<div class="field">
 									<label for="message">Message</label>
@@ -168,12 +168,29 @@
 			</div>
 
 		<!-- Scripts -->
+<script language="JavaScript">
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("message","req","Please insert a message");
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+        <script language="javascript" type="text/javascript">
+function windowClose() {
+window.open('','_parent','');
+window.close();
+}
+</script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/gen_validatorv31.js"</script>
 
 	</body>
 </html>
