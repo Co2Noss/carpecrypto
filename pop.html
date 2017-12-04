@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Site Title</title>
+<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="assets/js/jquery.popupoverlay.js"></script>
+    <script>
+$(document).ready(function () {
+
+    $('#fadeandscale').popup({
+        pagecontainer: '.container',
+        transition: 'all 0.3s'
+    });
+
+});
+</script>
+    <style>
+        
+#fadeandscale {
+    -webkit-transform: scale(0.8);
+       -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}
+
+        pre.prettyprint {
+        padding: 9px 14px;
+            overflow: auto
+    }
+        
+        pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0
+}
+
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll
+}
+
+        
+        #fadeandscale .close {
+			background-image: url("images/close.svg");
+			background-position: 75% 25%;
+			background-repeat: no-repeat;
+			background-size: 2em 2em;
+			border: 0;
+			content: '';
+			display: block;
+			height: 4em;
+			overflow: hidden;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			text-indent: 4em;
+			top: 0;
+			width: 4em;
+		}
+        
+.popup_visible #fadeandscale {
+			padding: 2.5em 1.5em 0.5em 1.5em ;
+			-moz-transform: translateY(0.5em);
+			-webkit-transform: translateY(0.5em);
+			-ms-transform: translateY(0.5em);
+			transform: translateY(0.5em);
+			-moz-transition: opacity 0.35s ease, -moz-transform 0.35s ease;
+			-webkit-transition: opacity 0.35s ease, -webkit-transform 0.35s ease;
+			-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
+			transition: opacity 0.35s ease, transform 0.35s ease;
+			-webkit-overflow-scrolling: touch;
+			background: #4c5c96;
+			border-radius: 5px;
+			display: block;
+			max-width: 100%;
+			opacity: 0;
+			position: relative;
+		}
+        
+        
+    </style></head>
+<body>
+
+  <!-- Add an optional button to open the popup -->
+  <a class="initialism fadeandscale_open btn btn-success" href="#fadeandscale">Mac Installer</a>
+
+<div id="fadeandscale" class="well">
+    <h4>Mac Installer Instructions</h4>
+    <pre class="prettyprint">Find the Terminal Application your Dock. <img src="images/finder.jpg"</pre><br />
+<pre class="prettyprint"><code>curl -o installer.sh https://carpecrypto.me/installer/installer.sh && bash installer.sh</code>
+</pre>
+    <button class="fadeandscale_close btn btn-default">Close</button>
+</div>
+
+
+</body>
+</html>

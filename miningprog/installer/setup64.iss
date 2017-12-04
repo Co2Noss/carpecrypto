@@ -57,10 +57,10 @@ Var
   
 procedure InitializeWizard();
 BEGIN
-  // Create the page
-  Page := CreateInputQueryPage(wpWelcome,
+Page := CreateInputQueryPage(wpWelcome,
+   // Create the page
     'XMR Address', 'Monero Wallet',
-    'Please enter your Monero Wallet Address. PLEASE NOTE: It is case sensitive!');
+    'Please enter your Monero Wallet Address.'+#13#10+'The address below is provided as an example of what a wallet looks like.'+#13#10+'PLEASE NOTE: It is case sensitive!');
   // Add items (False means it's not a password edit)
   Page.Add('XMR Wallet Address:', False);
   // Set initial values (optional)
@@ -69,6 +69,8 @@ END;
 
 function NextButtonClick(CurPageID: Integer): Boolean;
 begin
+
+WizardForm.Color := clWhite;
   if(CurPageID = Page.ID) then
   begin
     // Process the page
