@@ -6,7 +6,9 @@
     padding-bottom: 50%;
     padding-top: 35px; height: 0; overflow: hidden;
 }
-
+.coinmarketcap-currency-widget{
+    background-color: #2E3141;
+}
 .vid-container iframe,
 .vid-container object,
 .vid-container embed {
