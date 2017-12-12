@@ -6,8 +6,10 @@
 -->
 <html>
 	<head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110601910-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110601910-1"></script>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="assets/js/jquery.popupoverlay.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -67,6 +69,7 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
+                                <li><a href="http://pool.carpecrypto.me/">Pool</a></li>
 								<li><a href="letter.html">Letter</a></li>
                                 <li><a href="blog.html">Blog</a></li>
                                 <li><a href="info.html">Info</a></li>
@@ -90,34 +93,34 @@
                                         <div id="faqs">
 									<h3 class="major">F.A.Q.</h3>
                                             
-                                    <h4>What is mining? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>What is mining? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>Mining is the process of making computer hardware do mathematical calculations for the network to confirm transactions and increase security. As a reward for their services, miners can collect transaction fees for the transactions they confirm, along with newly created coins. Mining is a specialized and competitive market where the rewards are divided up according to how much calculation is done.</p></div>
                                     
-                                    <h4>Will this work while my PC is hibernating or in sleep mode? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>Will this work while my PC is hibernating or in sleep mode? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>No, your personal computer must be powered on and running with normal power in order to perform the caluclations.</p></div>
                                             
-                                    <h4>When do I get paid? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>When do I get paid? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>Every time a block gets verified by miners much like yourself you get paid. This process usually takes anywhere from 30 minutes to two hours.</p></div>
                                             
-                                    <h4>What is &#34;hash rate&#34;? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>What is &#34;hash rate&#34;? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>A hash is the output of a hash function and, as it relates to Monero, the Hash Rate is the speed at which a computer is completing an operation in the Monero code. A higher hash rate is better when mining as it increases your opportunity of finding the next block and receiving the reward.</p></div>
                                             
-                                    <h4>What is &#34;accepted hashes&#34;? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>What is &#34;accepted hashes&#34;? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>An accepted share represents work that your miner did towards a round in a mining pool. When the pool finds a block, it distributes the block reward (i.e. 6XMR) to the miners according to how many shares they have contributed during that round. The more shares you contributed, the more payback you get.</p></div>
                                             
-                                     <h4>What are &#34;rejected hashes&#34;? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                     <h4>What are &#34;rejected hashes&#34;? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>Rejected shares are bad, as it represents work computer that will not get applied towards a blockchain discovery, and will not be paid for.  Rejected shares commonly occur when your computer was busy grinding a cryptocoin share problem, and it did not submit the results in time to be counted towards a coin discovery. Rejected share work is discarded.</p></div>
                                             
-                                    <h4>What is a block? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>What is a block? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>A block is a unit of the code the comprises the bockchain. It is the record of transactions that have occurred since the last block was created and a confirmation to previous transactions.</p></div>
                                             
-                                    <h4>What is the blockchain? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>What is the blockchain? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>The blockchain is a public record of all transaction on the network in relation to the coin being viewed.</p></div>
                                             
-                                     <h4>What devices do you support? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                     <h4>What devices do you support? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>We support a multitude of devices such as iOS (iPhones and iPads) Android (Phones and Tablets), Windows (Laptops and Desktops), and OSX (Macbooks and iMac)</p></div>
                                             
-                                    <h4>What is Code 1450? <i class="fa fa-plus" aria-hidden="true"></i></h4>
+                                    <h4>What is Code 1450? <i class="far fa-plus-square" aria-hidden="true"></i></h4>
                                             <div><p>Code 1450 means your antivirus flagged our miner as a virus. You need to allows the file to run and remove it from quarantine. If you have trouble contact us!</p></div>
                                     </div>
 								</div>
@@ -131,10 +134,11 @@
 							</form>
 
 							<ul class="contact">
-								<li class="fa-envelope"><a href="mailto:support@carpecrypto.me">support@carpecrypto.me</a></li>
-								<!--<li class="fa-twitter"><a href="#">CarpeCrypto</a></li> -->
-								<li class="fa-facebook"><a href="https://www.facebook.com/carpecrypto">facebook.com/carpecrypto</a></li>
-								<li class="fa-instagram"><a href="https://www.instagram.com/carpecrypto/">instagram.com/carpecrypto</a></li>
+								<li><i class="far fa-envelope"></i> <a href="mailto:support@carpecrypto.me">support@carpecrypto.me</a></li>
+								<li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/carpecrypto">facebook.com/carpecrypto</a></li>
+								<li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/carpecrypto/">instagram.com/carpecrypto</a></li>
+                                <li><i class="fab fa-discord"></i> <a href="https://discord.gg/qvWDrud">discord.gg/qvWDrud</a></li>
+                                <li><i class="fab fa-reddit-square"></i> <a href="https://www.reddit.com/r/CarpeCrypto/">reddit.com/r/CarpeCrypto/</a></li>
 							</ul>
 							<ul class="copyright">
 								<li>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> CarpeCrypto. All rights reserved.</li>

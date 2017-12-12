@@ -29,7 +29,7 @@
 
 ,
 {
-    "title": "What is a block?", "description": "Mining is the process of making computer hardware do mathematical calculations for the network to confirm transactions and increase security. As a reward for their services, miners can collect transaction fees for the transactions they confirm, along with newly created coins. Mining is a specialized and competitive market where the rewards are divided up according to how much calculation is done."
+    "title": "What is a block?", "description": "A block is a unit of the code the comprises the bockchain. It is the record of transactions that have occurred since the last block was created and a confirmation to previous transactions."
 }
 
 ,
