@@ -1,20 +1,29 @@
 [ {
-    "title": "What is mining?", "description": "Mining is the process of making computer hardware do mathematical calculations for the network to confirm transactions and increase security. As a reward for their services, miners can collect transaction fees for the transactions they confirm, along with newly created coins. Mining is a specialized and competitive market where the rewards are divided up according to how much calculation is done."
+    "title": "What is mining?", "description": "Mining uses your device's processing power to verify digital transactions. While this is taking place each transaction verified from your device funds your wallet with a reward in the form of Monero."
 }
 
 ,
 {
-    "title": "Will this work while my PC is in hibernation or sleep mode?", "description": "No, your personal computer must be powered on and running with normal power in order to perform the caluclations."
+    "title": "Will this work while my PC is in hibernation or sleep mode?", "description": "No, your personal computer must be powered on and running with normal power in order to perform the calculations."
+}
+
+,
+{   
+    "title": "What is Monero?", "description": "Monero is an emerging digital currency that is secure and allows you to buy and sell goods and services anonymously."
+}
+,
+{
+    "title": "When do I get paid?", "description": "Payment comes when your device verifies a digital transaction. This services then rewards your digital wallet with the verification fee."
 }
 
 ,
 {
-    "title": "When do I get paid?", "description": "Every time a block gets verified by miners much like yourself you get paid. This process usually takes anywhere from 30 minutes to two hours."
+    "title": "What is a wallet?", "description": "A wallet is a digital bank account that is secure. It operates as a medium to accumulate your rewarded verification fees."
 }
 
 ,
 {
-    "title": "What is \"Hash Rate\"?", "description": "A hash is the output of a hash function and, as it relates to Monero, the Hash Rate is the speed at which a computer is completing an operation in the Monero code. A higher hash rate is better when mining as it increases your opportunity of finding the next block and receiving the reward."
+    "title": "What is \"Hash Rate\"?", "description": "A hash is the output of a hash function and, as it relates to Monero, the Hash Rate is the speed at which a computer is completing an operation in the Monero code. A higher hashrate is better when mining as it increases your opportunity of finding the next block and receiving the reward."
 }
 
 ,
@@ -24,12 +33,12 @@
 
 ,
 {
-    "title": "What are \"Rejected Hashes\"?", "description": "Rejected shares are bad, as it represents work computed that will not get applied towards a blockchain discovery, and will not be paid for. Rejected shares commonly occur when your computer was busy grinding a cryptocoin share problem, and it did not submit the results in time to be counted towards a coin discovery. Rejected share work is discarded."
+    "title": "What are \"Rejected Hashes\"?", "description": "Rejected shares are bad, as it represents work computed that will not get applied towards a blockchain discovery, and will not be paid for. Rejected shares commonly occur when your computer was busy solving a cryptocoin share problem, and it did not submit the results in time to be counted towards a coin discovery. Rejected share work is discarded."
 }
 
 ,
 {
-    "title": "What is a block?", "description": "A block is a unit of the code the comprises the bockchain. It is the record of transactions that have occurred since the last block was created and a confirmation to previous transactions."
+    "title": "What is a block?", "description": "A block is a unit of the code the comprises the blockchain. It is the record of transactions that have occurred since the last block was created and a confirmation to previous transactions."
 }
 
 ,
